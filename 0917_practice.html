@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+button {
+background-color: #ffffff;
+border: 1px solid #d6d6d6;
+right: 20px;
+width: 98px;
+height:38px;
+font-size: 12px;
+line-height: 16px;
+border-radius: 20px;
+font-family: -apple-system,BlinkMacSystemFont,"Malgun Gothic","맑은 고딕",helvetica,"Apple SD Gothic Neo",sans-serif;
+font-weight: 500;
+letter-spacing: -0.4px;
+cursor: pointer;
+}
+
+
+before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(https://pm.pstatic.net/resources/asset/sp_main.59f2144d.png);
+    background-size: 468px 456px;
+    background-position: -295px -351px;
+    background-repeat: no-repeat;
+    width: 14px;
+    height: 14px;
+    margin:auto
+}
+    
+
+::after {
+content: "";
+display: inline-block;
+background-image: url("https://icons8.com/icon/Wgd88M98QIxt/exit");
+background-size: 468px 456px;
+background-position: -377px -420px;
+background-repeat: no-repeat;
+width: 16px;
+height: 16px;
+margin: 16px 0 0 5px;
+vertical-align: top;
+position: absolute;
+}
+
+
+button:hover{
+         background-color: #dfdfdf;
+
+}
+
+</style>
+
+
+<body>
+  <button type="button">
+   로그아웃
+   ::after
+    </button>
+
+</body>
+</html>
