@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Floating Button</title>
     <style>
+        html.body{
+            scroll-behavior: smooth;
+        }
+        
         .blind {
             position: absolute;
             clip: rect(0 0 0 0);
@@ -35,13 +39,13 @@
             bottom: 40px;
         }
 
-        .btn-setting {
+        .btn{
+            display: inline-block;
             width: 40px;
             height: 40px;
             border-radius: 50%;
             border: 1px solid #d8d8d8;
             background-color: #fff;
-            background-image: url('./images/icons/setting.svg');
             background-size: 16px;
             background-repeat: no-repeat;
             background-position: center center;
@@ -49,9 +53,25 @@
             cursor: pointer;
         }
 
-        .btn-setting:hover {
+        .btn-:hover {
             background-color: #f3f3f3;
         }
+
+.btn-top {
+        
+            background-image: url('./images/icons/arrow-top.svg');
+            margin-right: 16px; /* 해당요소의 우측에 여백을 지정*/
+        }
+
+        .btn-setting {
+        
+            background-image: url('./images/icons/setting.svg');
+         
+        }
+
+        
+
+
     </style>
 </head>
 
@@ -360,7 +380,10 @@
     </div>
 
     <div class="btn-container">
-        <button type="button" class="btn-setting">
+        <a href="#" class="btn btn-top">
+            <span class="blind">위로가기</span>
+        </a>
+        <button type="button" class="btn btn-setting">
             <span class="blind">설정</span>
         </button>
     </div>
