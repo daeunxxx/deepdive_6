@@ -27,10 +27,30 @@
             text-align: justify;
         }
 
-        .btn-setting{
+        .btn-container {
+            outline: 1px solid red;
+            position: fixed;
+            /* left, top, right, bottom */
+            right: 40px;
+            bottom: 40px;
+        }
+
+        .btn-setting {
             width: 40px;
             height: 40px;
-            border: 1px; 
+            border-radius: 50%;
+            border: 1px solid #d8d8d8;
+            background-color: #fff;
+            background-image: url('./images/icons/setting.svg');
+            background-size: 16px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+
+        .btn-setting:hover {
+            background-color: #f3f3f3;
         }
     </style>
 </head>
@@ -340,7 +360,7 @@
     </div>
 
     <div class="btn-container">
-        <button type="button">
+        <button type="button" class="btn-setting">
             <span class="blind">설정</span>
         </button>
     </div>
