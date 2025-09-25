@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/f3eb3d476c.js" crossorigin="anonymous"></script>
+</head>
+<style>
+            .blind {
+            position: absolute;
+            clip: rect(0 0 0 0);
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+        }
+            .container {
+            max-width: 700px;
+            width: 100%;
+            margin: 50px auto;
+            border: 1px solid #d8d8d8;
+            border-radius: 15px;
+            padding: 1.5rem;
+            font: 1.2em/1.5 arial, sans-serif;
+            color: #333;
+            text-align: justify;
+        }
+
+        .btn-container {
+            position: fixed;
+            /* left, top, right, bottom */
+            right: 40px;
+            bottom: 40px;
+        }
+
+        .btn{
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid #d8d8d8;
+            background-color: #fff;
+            background-size: 16px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+         
+        }
+
+        .btn-:hover {
+            background-color: #0b0606;
+        }
+
+
+        .btn-setting {
+        
+            background-image: url('./images/icons/setting.svg');
+         
+        }
+
+        .popup-container {
+      width: 350px;
+      height: 250px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+      padding: 20px;
+      position: fixed;
+      right: 30px;
+      bottom: 100px;
+      display: none; 
+    }
+
+
+</style>
+
+<body>
+    <div class="btn-container">
+        <button type="button" class="btn btn-setting open-popup">
+        <span class="blind">설정</span>
+        </button>
+    <section class="popup-container">
+        <h2>설정</h2>
+        <div class="contents">
+    
+        </div>
+
+        <button type="button" class="close-popup">
+            <span>닫기</span>
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        
+ <script>
+        /* .open-popup 버튼을 클릭(EVENT)하면, .popup-container 요소를
+        화면에 보이게 변경할거야 */
+        const openBtn = document.querySelector('.open-popup');
+        const popup = document.querySelector('.popup-container')
+        const closeBtn = document.querySelector('.close-popup');
+
+        openBtn.addEventListener('click', () => {
+      popup.style.display = 'block';
+      openBtn.style.backgroundColor = 'green';  // 초록색으로 바꾸기
+      openBtn.style.color = 'white';
+    });
+
+    
+    closeBtn.addEventListener('click', () => {
+      popup.style.display = 'none';
+      openBtn.style.backgroundColor = 'white';
+      openBtn.style.color = 'black';
+    });
+
+    </script>
+    </div>
+        
+
+
+</body>
+</html>
