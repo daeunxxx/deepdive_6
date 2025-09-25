@@ -29,7 +29,6 @@
 
         .btn-container {
             position: fixed;
-            /* left, top, right, bottom */
             right: 40px;
             bottom: 40px;
         }
@@ -93,15 +92,13 @@
         </button>
         
  <script>
-        /* .open-popup 버튼을 클릭(EVENT)하면, .popup-container 요소를
-        화면에 보이게 변경할거야 */
         const openBtn = document.querySelector('.open-popup');
         const popup = document.querySelector('.popup-container')
         const closeBtn = document.querySelector('.close-popup');
 
         openBtn.addEventListener('click', () => {
       popup.style.display = 'block';
-      openBtn.style.backgroundColor = 'green';  // 초록색으로 바꾸기
+      openBtn.style.backgroundColor = 'green'; 
       openBtn.style.color = 'white';
     });
 
