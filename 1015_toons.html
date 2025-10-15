@@ -1,36 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>toons</title>
-    <link rel="stylesheet" href="./css/reset.css">
-    <style>
-        body {
-        background: url("./images/.png");
-        background-size: cover;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>toons</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <style>
 
-        }
+    :root {
+      --main-color: #f6ee0a; 
+      --text-color: #fff; 
+      --bg-blur: rgba(255, 255, 255, 0.2);
+      --font-family: "Noto Sans KR", sans-serif;
+    }
 
 
-    </style>
+    body {
+      margin: 0;
+      font-family: var(--font-family)
+    }
+
+    .navbar {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px 0; 
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 10;
+    }
+
+    .menu {
+      display: flex;
+      gap: 40px;
+    }
+
+    .menu a {
+      text-decoration: none;
+      font-weight: 600;
+      color: var(--text-color);
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+
+    .menu a:hover {
+      color: var(--main-color);
+      text-decoration: underline 2px;
+      text-underline-offset: 4px;
+    }
+
+    .section {
+      width: 100%;
+      height: 400px;
+      background: url("./images/toons.jpg") no-repeat center center;
+      background-size: cover;
+      position: relative;
+    }
+
+
+    .section h1 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 64px;
+      font-weight: 900;
+      letter-spacing: 2px;
+
+    }
+  </style>
 </head>
 
-
 <body>
-    <header class="navbar">
+  <header class="navbar">
     <div class="menu">
-        <a href="#">COMPANY</a>
-        <a href="#">CAREERS</a>
-        <a href="#">CONTACT</a>
-        <a href="#">MEDIA</a>
-        <a href="#">IMPACT</a>
-
+      <a href="#">COMPANY</a>
+      <a href="#">CAREERS</a>
+      <a href="#">CONTACT</a>
+      <a href="#">MEDIA</a>
+      <a href="#">IMPACT</a>
     </div>
   </header>
-    
+
+  <div class="visual">
+    <section class="section">
+    </section>
+  </div>
 </body>
-
-
-
 </html>
