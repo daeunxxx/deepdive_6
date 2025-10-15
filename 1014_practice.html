@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다크모드 실습</title>
+    <style>
+        :root{ /* :root는 HTML전체에서 쓸 수 있는 전역공간 / HTML 최상위, 색상,폰트 전체 스타일 수정가능 */
+            --color-primary:pink; /* 변수 이름은 -- , 버튼 배경색 */ 
+            --color-body: #dadada; /* 배경색 */
+            --color-text: #333; /* 글자색 */
+            --text-large: 1.2rem;
+            --radius-s: 10px;
+        }
+
+        body{
+            background-color: var(--color-body); /* 변수 호출은 var() */
+            color: var(--color-text);
+            transition: 0.4s;
+        }
+
+        button {
+            color: #fff;
+            border: 2px solid var(--color-text);
+            height: 40px;
+            padding: 0 1.5rem;
+            /* 배경색, 글자크기, 모서리둥글기를 변수로 선언하기 */
+            background-color: var(--color-primary);
+            font-size:  var(--text-large);
+            border-radius:  var(--radius-s);
+        }
+
+    </style>
+
+
+</head>
+
+
+<body>
+    <button type="button" id="toggle">
+        DarkMode
+    </button>
+
+    <script>
+        const btn = document.getElementById('toggle'); // HTML에서 특정 id 가진 요소 가져오기
+        let isDark = false; // light mode 상태
+
+        btn.addEventListener('click', () => {
+            isDark = !isDark // isDark의 결과를 반대로 넣는다. !-> 부정연산자 NOT
+            console.log ('isDark : ', isDark)
+            document.documentElement.style.setProperty('--color-body', isDark ? '#222' : '#e8e8e8') // 삼항연산자 : 조건 ? 참일 때 값 : 거짓일 때 값 
+            document.documentElement.style.setProperty('--color-text', isDark ? '#e8e8e8' : '#222')
+            // HTML 요소 의미 :root와 같음   /  css변수값을 js에서 바꾸는 함수 
+        })
+    </script>
+
+
+    
+</body>
+
+
+</html>
