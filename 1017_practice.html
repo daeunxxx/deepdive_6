@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수</title>
+
+</head>
+<body>
+  
+    <h1 onclick="chageTextA()">헤딩요소</h1>
+    <hr>
+
+
+    <script>    
+        function sayHello() { // 1. 인사 함수
+            console.log("안녕!");
+        }
+        sayHello(); 
+        
+
+        function add(a, b) { // 2. 덧셈 함수
+            return a + b;
+        }
+
+        let result = add(3, 5);
+            console.log(result);
+
+
+        function today() { // 3. 오늘 날짜 알려주는 함수 
+            const today = new Date();
+            return today.toLocaleDateString();
+        }
+            console.log('오늘은 ' + today());
+
+
+        function showTime() { // 4. 현재 시간 알려주는 함수
+            const now = new Date();
+            console.log('현재 시각은' + now.toLocaleTimeString() + '입니다.');
+        }
+        showTime();
+
+
+
+        function makeIcecream(syrup) { // 5. 시럽 넣는 아이스크림 함수
+            console.log(syrup + '아이스크림');
+        }
+            console.log(makeIcecream('아몬드봉봉 '))
+            console.log(makeIcecream('초코'))
+            console.log(makeIcecream('땅콩'))
+
+        
+        // function makeIcecream(flavor) { //매개변수
+        //     console.log(flavor + '바')
+        // }
+
+        //     makeIcecream('쌍쌍');
+        //     makeIcecream('누가');
+
+
+        function makeIcecream(syrup) {
+            return syrup + '아이스크림'; 
+        }
+
+        console.log(makeIcecream('딸기'));
+
+        
+   
+
+
+    </script>
+    
+</body>
+</html>

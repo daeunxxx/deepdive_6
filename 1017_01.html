@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .a {
+            background-color: gold
+        }
+
+        .b {
+            background-color: dodgerblue
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Mission -->
+     A 버튼 클릭시 A박스의 글자 변경 -> Hello
+     B 버튼 클릭시 A박스의 글자 변경 -> World
+
+     // 1. 변수선언(const) : box라는 변수에 위의 div 요소를 담으시오. querySelector 사용
+    const box = document.querySelector('.box')
+    // 2. css변경 : box요소의 글자색을 tomato로 변경 
+    box.style.color = 'tomato'
+
+    <hr>
+
+    <h1 onclick="chageTextA()">헤딩요소</h1>
+     
+    <button type="button" id="btn-a" onclick="changeText(boxA, 'Hello')">클릭버튼 A</button>
+    <button type="button" id="btn-b" onclick="changeText(boxB, 'World')">클릭버튼 B</button>
+    <hr>
+    <div class="box a">A</div>
+    <div class="box b">B</div>
+
+    <script>
+    const boxA = document.querySelector('.box.a');
+    const boxB = document.querySelector('.box.b');
+
+    const btnA = document.getElementById('btn-a');
+    const btnB = document.getElementById('btn-b');
+
+
+    // btnA.addEventListener('click', () => {
+    // boxA.textContent = 'Hello'; 
+    // });
+
+    // btnB.addEventListener('click', () => {
+    // boxB.textContent = 'World'; 
+    // });
+
+    function chageText(target, text) {
+        target.textContent = text;
+
+    }
+
+    function chageTextA() {
+        boxA.textContent = 'Hello'
+
+    }
+
+        function changeTextB() {
+        boxB.textContent = 'World'
+
+    }
+
+
+    function makeIcecream(syrup) {
+        // 아이스크림 만드는 로직
+        return syrup + 'icecream'
+    }
+
+    console.log(makeIcecream('딸기'))
+    console.log(makeIcecream('초코'))
+    console.log(makeIcecream('바닐라'))
+    console.log(makeIcecream('땅콩'))
+
+
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>
