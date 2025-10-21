@@ -36,8 +36,8 @@ getCircleArea(5);
 // 함수명 : calcDiscount 결과 : 원래가격 x원에서 y%할인되어, 최종가격은 z 원 입니다.
 
 function calcDiscount(price, rate){
-    const calcDiscount = price * (rate/100);
-    const finalPrice = price - calcDiscount;
+    const Discount = price * (rate/100);
+    const finalPrice = price - Discount;
     console.log(`원래가격 ${price}원에서 ${rate}% 할인되어, 최종가격은 ${finalPrice}원 입니다.`);
 }
 
