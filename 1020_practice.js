@@ -47,8 +47,8 @@ calcDiscount(10000, 20);
 // 함수명 : getRemainder 결과 : x를 y로 나눈 나머지는 z 입니다. 
 
 function getRemainder(x, y){
-    const getRemainder = x % y;
-    console.log(`${x}를 ${y}로 나눈 나머지는 ${getRemainder}입니다.`);
+    const remainer = x % y;
+    console.log(`${x}를 ${y}로 나눈 나머지는 ${remainer}입니다.`);
 }
 
 getRemainder(10, 3);
@@ -57,8 +57,8 @@ getRemainder(10, 3);
 // 함수명 : getRectPerimeter 결과 : 가로 X cm, 세로 Y cm인 사각형의 둘레는 Z cm 입니다.
 
 function getRectPerimeter(x, y){
-    const getRectPerimeter = (x + y) * 2;
-    console.log(`가로${x}cm, 세로${y}cm인 사각형의 둘레는 ${getRectPerimeter}cm 입니다.`);
+    const perimeter = (x + y) * 2;
+    console.log(`가로${x}cm, 세로${y}cm인 사각형의 둘레는 ${perimeter}cm 입니다.`);
 }
 
 getRectPerimeter(2, 2);
