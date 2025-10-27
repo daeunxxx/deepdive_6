@@ -25,7 +25,7 @@ console.log("합격여부", score >= 80 && attendance >= 90);
 // 3. 비가 오고, 우산이 없으면 "비 맞음"
 const isRaining = true;
 const hasUmbrella = false;
-if (isRaining && ! hasUmbrella){
+if (isRaining && !hasUmbrella){
 console.log("비를 맞습니다")};
 
 
