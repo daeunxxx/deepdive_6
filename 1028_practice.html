@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nodelist</title>
+</head>
+
+<body>
+    <p>안녕</p>
+    <p>노드리스트</p>
+    <p>ㅠㅠ</p>
+
+    <script>
+        const pList = document.querySelectorAll('p'); // NodeList 생성
+
+        pList.forEach((p, idx) => {  // forEach로 출력
+            console.log(`${idx + 1}. ${p.textContent}`);
+
+        }); 
+        
+    </script>
+
+</body>
+</html>
