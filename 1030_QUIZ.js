@@ -64,3 +64,5 @@ function getAverage(arr) {
 }
 
 console.log(getAverage(numbers));
+
+
