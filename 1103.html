@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Elements</title>
+    <style>
+        input:focus {
+            background-color: #d6e4f1;
+            border-color: 1e90ff;
+            box-shadow: 0 0 30px rgba(31, 143, 255, 0.5); 
+
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" placeholder="좋아하는 커피를 선택하세요">
+
+    <form action="./login_success.html">
+    <input type="text" placeholder="input id" required>
+    <input type="password" placeholder="input password" required>
+    <button type="reset">다시입력하기</button>
+    <button type="sumit">로그인</button>
+    </form>
+
+<!-- button, reset, sumit -->
+
+
+    <hr>
+    <form>
+        <input type="email" required placeholder="이메일주소를 입력하세요">
+        <button type="sumit" disabled>인증번호받기</button>
+    </form>
+
+    <textarea readonly>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio magni commodi ex porro odit ad? Nostrum excepturi possimus culpa. Quod consequuntur deleniti accusamus quam possimus rem, ullam laborum nobis?</textarea>
+    
+</body>
+</html>
